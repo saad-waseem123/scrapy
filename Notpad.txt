@@ -1,0 +1,44 @@
+# Scrapy Intallation Guid
+URL: https://docs.scrapy.org/en/latest/intro/install.html
+1.Install Anaconda
+2.Run to install scrapy 
+    ```conda install -c conda-forge scrapy```
+
+# Scrapy Create Project
+1.Run to create project 
+    ```scrapy startproject {ProjectName}```
+
+# Scrapy Shell for testing environment
+1.To enter Shell
+    ```scrapy shell```
+2.Hit URL
+    ```fetch("URL")```
+3.find element in crwaled page
+    ```response.css("Seletor")```
+
+# Scrapy Output
+1.
+```scrapy crawl {spiderName} -O {OutputFileName.json|csv}```
+
+# Scrapy Items
+
+# Scrapy Items loader
+
+# Scrapy Pipline
+
+# Scrapy User agent
+1.Run this in terminial
+```pip install scrapy-user-agents```
+2.Add this in settings.py DOWNLOADER_MIDDLEWARES
+'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
+
+
+
+GET https://www.fiverr.com/search/gigs?query=woocommerce
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+accept-language: en-US,en;q=0.9
+cache-control: no-cache
+ect: 3g
+pragma: no-cache
+sec-ch-ua-full-version-list: "Mozilla/5.0 (Linux; Android 5.0; SM-G920A) AppleWebKit (KHTML, like Gecko) Chrome Mobile Safari (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)"

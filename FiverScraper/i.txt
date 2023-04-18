@@ -1,0 +1,33 @@
+#Change Currency
+https://www.fiverr.com/localization/change_currency
+source: "user_menu"
+target_currency: "USD"
+
+#Search Bar
+https://www.fiverr.com/search/gigs?query=data%20scraping
+
+#pageination
+//*[@id="pagination"]/li[@class="pagination-arrows"]/a/@href
+
+#list 
+//div[@class="gig_listings-package listing-container grid-view"]
+
+#title
+//div[@class="gig_listings-package listing-container grid-view"]/div[1]/div/h3/a
+xpath('//div/div/h3/a/text()').get()
+#link
+//div[@class="gig_listings-package listing-container grid-view"]/div[1]/div/h3/a/@href
+xpath('//div/div/h3/a/@href').get()
+#level
+//div[@class="gig_listings-package listing-container grid-view"]/div[1]/div/div[@class="seller-info text-body-2"]/div/div/span
+xpath('//div/div/div[@class="seller-info text-body-2"]/div/div/span').get()
+
+#rating
+//div[@class="gig_listings-package listing-container grid-view"]/div[1]/div/div/div/span/span[@class="gig-rating text-body-2"]
+xpath('//div/div/div/div[@class="rating-wrapper"]/span').get()
+#Price
+//div[@class="gig_listings-package listing-container grid-view"]/div[1]/div/footer/a/span
+xpath('//div[1]/div/footer/a/span').get()
+
+
+req = Request('https://www.fiverr.com/search/gigs?query=data%20scraping', headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:98.0) Gecko/20100101 Firefox/98.0","Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate","Connection": "keep-alive","Upgrade-Insecure-Requests": "1","Sec-Fetch-Dest": "document","Sec-Fetch-Mode": "navigate","Sec-Fetch-Site": "none","Sec-Fetch-User": "?1","Cache-Control": "max-age=0"})
